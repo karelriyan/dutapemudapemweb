@@ -23,6 +23,12 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- Nice Select CSS -->
     <link rel="stylesheet" href="{{ asset('css/nice-select.css') }}" />
     <!-- Font Awesome CSS -->
@@ -82,7 +88,8 @@
                         <div class="col-lg-3 col-md-3 col-12">
                             <!-- Start Logo -->
                             <div class="logo">
-                                <a href="{{ route('home') }}"><img src="{{ asset('img/logo.png') }}" alt="#" width="60%" /></a>
+                                <a href="{{ route('home') }}"><img src="{{ asset('img/logo.png') }}" alt="#"
+                                        width="60%" /></a>
                             </div>
                             <!-- End Logo -->
                             <!-- Mobile Nav -->
@@ -95,7 +102,8 @@
                                 <nav class="navigation">
                                     <ul class="nav menu">
                                         <li class="{{ request()->is('/') ? 'active' : '' }}">
-                                            <a href="{{ route('home') }}">Beranda</a> </li>
+                                            <a href="{{ route('home') }}">Beranda</a>
+                                        </li>
                                         <li class="{{ request()->is('doctors*') ? 'active' : '' }}">
                                             <a href="{{ route('lomba.index') }}">Kategori</a>
                                         </li>
@@ -146,12 +154,10 @@
                                     <a href="#"><img src="{{ asset('img/logo-unsoed.png') }}" alt=""></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img src="{{ asset('img/logo-digiyok.png') }}"
-                                            alt=""></i></a>
+                                    <a href="#"><img src="{{ asset('img/logo-digiyok.png') }}" alt=""></i></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img src="{{ asset('img/logo-dispora.png') }}"
-                                            alt=""></i></a>
+                                    <a href="#"><img src="{{ asset('img/logo-dispora.png') }}" alt=""></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -164,12 +170,10 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <ul>
                                         <li>
-                                            <a href="#"><i class="fa fa-caret-right"
-                                                    aria-hidden="true"></i>Home</a>
+                                            <a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="fa fa-caret-right"
-                                                    aria-hidden="true"></i>Kategori</a>
+                                            <a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Kategori</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -180,8 +184,7 @@
                                                 seleksi</a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="fa fa-caret-right"
-                                                    aria-hidden="true"></i>Berita</a>
+                                            <a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Berita</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -255,7 +258,8 @@
     {{-- Problem disini --}}
     <script src="{{ asset('js/main.js') }}"></script>
 
-    {{-- <script>
+    {{--
+    <script>
         $(document).ready(function () {
             $('#btn-lanjut').click(function () {
                 if (!$('#agreeTerms').is(':checked')) {
