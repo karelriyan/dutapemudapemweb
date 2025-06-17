@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\VerifikatorController;
 use App\Http\Controllers\JuriController;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\Auth\UserAuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth\AdminAuthController;
@@ -25,6 +26,9 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', [AuthController::class, 'index'])->name('home');
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('auth.login');
 Route::post('/login', [AuthController::class, 'login']);
+
+Route::get('/faq', [FaqController::class, 'index'])->name('faq.index');
+
 
 Route::get('/daftarlomba', [LombaPesertaController::class, 'index'])->name('lomba.index');
 Route::get('/daftarlomba/{id}', [LombaPesertaController::class, 'form'])->name('lomba.form');
