@@ -16,6 +16,13 @@ class AdminController extends Controller
         return view('admin.user.dashboard');
     }
 
+    public function edit($id)
+    {
+        $user = User::findOrFail($id);
+        $lombas = Lomba::all();
+
+        return view('admin.user.edit', compact('user', 'lombas'));
+    }
     
     public function dashboard(){
         $users = User::all();

@@ -13,16 +13,13 @@ return new class extends Migration
     {
         Schema::create('lomba_pesertas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
-            $table->foreignId('lomba_id');
-            $table->json('data_isian');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('lomba_id')->constrained()->onDelete('cascade');
+            $table->json('data_isian')->nullable();
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('lomba_pesertas');
