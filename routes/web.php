@@ -21,6 +21,7 @@ use App\Http\Controllers\LombaPesertaController;
 use App\Http\Controllers\PesertaController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\BeritaController;
 
 
 Route::get('/', [AuthController::class, 'index'])->name('home');
@@ -77,6 +78,8 @@ Route::get('/provinsi', [LocationController::class, 'getProvinsi']);
 Route::get('/kota/{kodeProvinsi}', [LocationController::class, 'getKota']);
 Route::get('/kecamatan/{kodeKota}', [LocationController::class, 'getKecamatan']);
 Route::get('/desa/{kodeKecamatan}', [LocationController::class, 'getDesa']);
+Route::get('/berita', [BeritaController::class, 'index'])->name('berita.index');
+
 
 Route::get('admin/create', function () {
     return view('admin.lomba.create');
